@@ -21,4 +21,6 @@ include ':onboarding:onboarding_domain'
 include ':tracker'
 include ':tracker:tracker_domain'
 include ':tracker:tracker_presentation'
+include ':core-ui'
 
+include ':tracker:tracker_data'
