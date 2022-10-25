@@ -9,11 +9,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.onboarding_presentation.R
+import com.example.core.R
+import com.example.core_ui.LocalSpacing
+import com.example.onboarding_presentation.component.ActionButton
 
 
 @Composable
 fun welcomeScreen() {
+    val spacing = LocalSpacing.current
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -21,10 +24,15 @@ fun welcomeScreen() {
     ) {
 
         Text(
-            text = stringResource(id = com.example.core.R.string.welcome_text),
+            text = stringResource(id = R.string.welcome_text),
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.h1
         )
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(spacing.spaceMedium))
+        ActionButton(text = stringResource(id = R.string.next), onClick = { /*TODO*/ },
+            modifier = Modifier.align(
+            Alignment.CenterHorizontally
+        ))
+
     }
 }
