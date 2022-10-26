@@ -18,7 +18,7 @@ import com.example.onboarding_presentation.component.ActionButton
 fun welcomeScreen() {
     val spacing = LocalSpacing.current
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.padding(spacing.spaceMedium).fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
