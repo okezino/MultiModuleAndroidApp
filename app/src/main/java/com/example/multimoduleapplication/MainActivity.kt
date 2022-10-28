@@ -12,9 +12,11 @@ import androidx.navigation.compose.rememberNavController
 import com.example.core.navigation.Route
 import com.example.multimoduleapplication.navigate.navigate
 import com.example.multimoduleapplication.ui.theme.MultiModuleApplicationTheme
+import com.example.onboarding_presentation.gender.GenderScreen
 import com.example.onboarding_presentation.welcome.WelcomeScreen
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,7 @@ class MainActivity : ComponentActivity() {
 
                     }
                     composable(Route.GENDER){
+                        GenderScreen(onNextClick = navController::navigate)
 
                     }
                     composable(Route.HEIGHT){
