@@ -19,6 +19,7 @@ import com.example.multimoduleapplication.ui.theme.MultiModuleApplicationTheme
 import com.example.onboarding_presentation.age.AgeScreen
 import com.example.onboarding_presentation.gender.GenderScreen
 import com.example.onboarding_presentation.height.HeightScreen
+import com.example.onboarding_presentation.weight.WeightScreen
 import com.example.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -45,7 +46,7 @@ class MainActivity : ComponentActivity() {
                             WelcomeScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.AGE) {
-                            AgeScreen(scaffoldState, onNextClick = navController::navigate )
+                            AgeScreen(scaffoldState, onNextClick = navController::navigate)
 
                         }
                         composable(Route.GOAL) {
@@ -56,7 +57,10 @@ class MainActivity : ComponentActivity() {
 
                         }
                         composable(Route.HEIGHT) {
-                            HeightScreen(scaffoldState = scaffoldState, onNextClick =navController::navigate )
+                            HeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNextClick = navController::navigate
+                            )
 
                         }
                         composable(Route.NUTRIENT_GOAL) {
@@ -70,6 +74,10 @@ class MainActivity : ComponentActivity() {
                         }
 
                         composable(Route.WEIGHT) {
+                            WeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNextClick = navController::navigate
+                            )
 
                         }
                     }

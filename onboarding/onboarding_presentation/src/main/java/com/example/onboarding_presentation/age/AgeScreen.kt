@@ -68,7 +68,7 @@ fun AgeScreen(
 
         }
         ActionButton(text = stringResource(id = R.string.next),
-            onClick = { viewModel::onNextClick },
+            onClick = { viewModel.onNextClick() },
             modifier = Modifier.align(Alignment.BottomEnd))
     }
 
