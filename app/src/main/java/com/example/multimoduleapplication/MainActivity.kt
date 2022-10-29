@@ -16,6 +16,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.core.navigation.Route
 import com.example.multimoduleapplication.navigate.navigate
 import com.example.multimoduleapplication.ui.theme.MultiModuleApplicationTheme
+import com.example.onboarding_presentation.activity.ActivityScreen
 import com.example.onboarding_presentation.age.AgeScreen
 import com.example.onboarding_presentation.gender.GenderScreen
 import com.example.onboarding_presentation.height.HeightScreen
@@ -40,7 +41,7 @@ class MainActivity : ComponentActivity() {
 
                     NavHost(navController = navController, startDestination = Route.WELCOME) {
                         composable(Route.ACTIVITY) {
-
+                            ActivityScreen(onNextClick = navController::navigate)
                         }
                         composable(Route.WELCOME) {
                             WelcomeScreen(onNavigate = navController::navigate)
