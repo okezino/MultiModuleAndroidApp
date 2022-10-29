@@ -1,5 +1,6 @@
 package com.example.onboarding_presentation.gender
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -11,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.core.navigation.Route
 import com.example.core.util.UiEvent
 import com.example.core_ui.LocalSpacing
 import com.example.core_ui.R
@@ -81,7 +83,7 @@ fun GenderScreen(
             }
         }
         ActionButton(text = stringResource(id = com.example.core.R.string.next),
-            onClick = { viewModel::onNextClick },
+            onClick = { viewModel.onNextClick()},
         modifier = Modifier.align(Alignment.BottomEnd))
     }
 
