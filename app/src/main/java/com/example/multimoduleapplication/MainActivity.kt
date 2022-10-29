@@ -18,6 +18,7 @@ import com.example.multimoduleapplication.navigate.navigate
 import com.example.multimoduleapplication.ui.theme.MultiModuleApplicationTheme
 import com.example.onboarding_presentation.age.AgeScreen
 import com.example.onboarding_presentation.gender.GenderScreen
+import com.example.onboarding_presentation.height.HeightScreen
 import com.example.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -55,6 +56,7 @@ class MainActivity : ComponentActivity() {
 
                         }
                         composable(Route.HEIGHT) {
+                            HeightScreen(scaffoldState = scaffoldState, onNextClick =navController::navigate )
 
                         }
                         composable(Route.NUTRIENT_GOAL) {
