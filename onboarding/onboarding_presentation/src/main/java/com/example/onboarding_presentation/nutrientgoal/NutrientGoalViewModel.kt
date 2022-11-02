@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.core.domain.preferences.Preferences
 import com.example.core.domain.usecase.FilterOutDigit
+import com.example.core.navigation.Route
 import com.example.core.util.UiEvent
 import com.example.onboarding_domain.use_case.ValidateNutrients
 import kotlinx.coroutines.channels.Channel
@@ -57,8 +58,9 @@ class NutrientGoalViewModel @Inject constructor(
                         preferences.saveCarbRatio(result.card)
                         preferences.saveProteinRatio(result.protein)
                         preferences.saveFatRatio(result.fat)
-
-
+                        viewModelScope.launch{
+                            _uiEvent.send(UiEvent.Navigate(Route.TRACKER_OVERVIEW))
+                        }
                     }
                     is ValidateNutrients.Result.Error -> {
                         viewModelScope.launch{
