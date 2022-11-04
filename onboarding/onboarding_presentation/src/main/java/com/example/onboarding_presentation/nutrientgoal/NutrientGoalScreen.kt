@@ -53,17 +53,39 @@ fun NutrientGoalScreen(
 
 
         ) {
-            Text(text = stringResource(id = R.string.whats_your_height),
+            Text(text = stringResource(id = R.string.what_are_your_nutrient_goals),
                 style = MaterialTheme.typography.h3)
 
             Spacer(modifier = Modifier.height(spacing.spaceMedium))
-            UnitTextField(value = view, onValueChange = viewModel::onHeightEnter , unit = stringResource(
-                id = R.string.cm
+            UnitTextField(value = viewModel.state.cardsRatio, onValueChange = {
+                viewModel.onEvent(
+                    NutrientGoalEvent.OnCarbRatioEnter(it)
+                )
+            } , unit = stringResource(
+                id = R.string.percent_carbs
+            ) )
+
+            Spacer(modifier = Modifier.height(spacing.spaceMedium))
+            UnitTextField(value = viewModel.state.proteinRatio, onValueChange = {
+                viewModel.onEvent(
+                    NutrientGoalEvent.OnProteinRatioEnter(it)
+                )
+            } , unit = stringResource(
+                id = R.string.percent_proteins
+            ) )
+
+            Spacer(modifier = Modifier.height(spacing.spaceMedium))
+            UnitTextField(value = viewModel.state.fatRatio, onValueChange = {
+                viewModel.onEvent(
+                    NutrientGoalEvent.OnFatRatioEnter(it)
+                )
+            } , unit = stringResource(
+                id = R.string.percent_fats
             ) )
 
         }
         ActionButton(text = stringResource(id = R.string.next),
-            onClick = { viewModel.onNextClick() },
+            onClick = { viewModel.onEvent(NutrientGoalEvent.OnNextClick) },
             modifier = Modifier.align(Alignment.BottomEnd))
     }
 
