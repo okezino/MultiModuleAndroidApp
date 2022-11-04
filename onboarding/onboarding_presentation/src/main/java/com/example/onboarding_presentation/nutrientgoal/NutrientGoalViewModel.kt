@@ -10,11 +10,13 @@ import com.example.core.domain.usecase.FilterOutDigit
 import com.example.core.navigation.Route
 import com.example.core.util.UiEvent
 import com.example.onboarding_domain.use_case.ValidateNutrients
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class NutrientGoalViewModel @Inject constructor(
     private val preferences: Preferences,
     private val filterOutDigit: FilterOutDigit,
