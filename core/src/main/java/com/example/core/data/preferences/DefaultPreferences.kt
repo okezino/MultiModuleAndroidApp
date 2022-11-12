@@ -1,11 +1,12 @@
 package com.example.core.data.preferences
 
 import android.content.SharedPreferences
+import com.example.core.domain.model.ActivityLevel
+import com.example.core.domain.model.Gender
+import com.example.core.domain.model.GoalType
+import com.example.core.domain.model.UserInfo
 import com.example.core.domain.preferences.Preferences
-import com.plcoding.core.domain.model.ActivityLevel
-import com.plcoding.core.domain.model.Gender
-import com.plcoding.core.domain.model.GoalType
-import com.plcoding.core.domain.model.UserInfo
+
 
 class DefaultPreferences(private val sharedPref: SharedPreferences) : Preferences {
     override fun saveGender(gender: Gender) {

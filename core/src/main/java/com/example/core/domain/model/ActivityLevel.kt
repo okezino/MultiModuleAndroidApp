@@ -1,4 +1,4 @@
-package com.plcoding.core.domain.model
+package com.example.core.domain.model
 
 sealed class ActivityLevel(val name: String) {
     object Low: ActivityLevel("low")

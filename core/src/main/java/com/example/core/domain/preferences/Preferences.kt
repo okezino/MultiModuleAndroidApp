@@ -1,9 +1,10 @@
 package com.example.core.domain.preferences
 
-import com.plcoding.core.domain.model.ActivityLevel
-import com.plcoding.core.domain.model.Gender
-import com.plcoding.core.domain.model.GoalType
-import com.plcoding.core.domain.model.UserInfo
+import com.example.core.domain.model.ActivityLevel
+import com.example.core.domain.model.Gender
+import com.example.core.domain.model.GoalType
+import com.example.core.domain.model.UserInfo
+
 
 interface Preferences {
 

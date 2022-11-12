@@ -1,4 +1,4 @@
-package com.plcoding.core.domain.model
+package com.example.core.domain.model
 
 data class UserInfo(
     val gender: Gender,

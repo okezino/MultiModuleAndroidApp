@@ -1,4 +1,4 @@
-package com.plcoding.core.domain.model
+package com.example.core.domain.model
 
 sealed class GoalType(val name: String) {
     object LoseWeight: GoalType("lose_weight")

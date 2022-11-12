@@ -1,4 +1,4 @@
-package com.plcoding.core.domain.model
+package com.example.core.domain.model
 
 sealed class Gender(val name: String) {
     object Male: Gender("male")
