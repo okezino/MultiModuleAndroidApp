@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="core/src/main/res/drawable/drawable.xml" value="0.1" />
+        <entry key="core/src/main/res/drawable/ic_breakfast.xml" value="0.1" />
+        <entry key="core/src/main/res/drawable/ic_burger.xml" value="0.1" />
+        <entry key="core/src/main/res/drawable/ic_dinner.xml" value="0.1" />
+        <entry key="core/src/main/res/drawable/ic_lunch.xml" value="0.1" />
+        <entry key="core/src/main/res/drawable/ic_snack.xml" value="0.1" />
       </map>
     </option>
   </component>

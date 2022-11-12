@@ -3,7 +3,7 @@ package com.example.tracker_presentation.tracker_overview
 import androidx.annotation.DrawableRes
 import com.example.core.util.UiText
 import com.example.tracker_domain.model.MealType
-import com.example.tracker_presentation.R
+import com.example.core.R
 
 
 data class Meal(
@@ -19,12 +19,12 @@ data class Meal(
 
 val defaultMeals = listOf(
     Meal(
-        name = UiText.StringResource(com.example.core.R.string.breakfast),
-        drawableRes = R.drawable.ic,
+        name = UiText.StringResource(R.string.breakfast),
+        drawableRes = R.drawable.ic_breakfast,
         mealType = MealType.Breakfast
     ),
     Meal(
-        name = UiText.StringResource(com.example.core.R.string.lunch),
+        name = UiText.StringResource(R.string.lunch),
         drawableRes = R.drawable.ic_lunch,
         mealType = MealType.Lunch
     ),
